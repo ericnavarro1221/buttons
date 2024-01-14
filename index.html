@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    
+</head>
+<style>
+    h1{
+        color: white;
+    }
+    h2{
+        color: white;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #27282c;
+        flex-direction: column;
+        gap: 50px;
+    }
+    #btn1, #btn2, #btn3 {
+        position: relative;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        letter-spacing: 0.1em;
+        font-weight: 400;
+        padding: 10px 30px;
+        border: 20px black;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        clip-path: polygon(100% 0%, 90% 51%, 100% 100%, 11% 100%, 0% 50%, 12% 0);
+        
+
+    }
+    #btn1:hover {
+    box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: rgb(223, 8, 187);
+    color: rgb(0, 0, 0);
+    clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 12% 51%, 0% 0%);
+    } 
+    #btn2:hover {
+    box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: aqua;
+    color: rgb(0, 0, 0);
+    clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 12% 51%, 0% 0%);
+
+    } 
+    #btn3:hover {
+    box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: rgb(28, 204, 9);
+    color: rgb(0, 0, 0);
+    clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 12% 51%, 0% 0%);
+    }
+</style>
+<body>
+    <h1>JavaScript addEventListener() Hands-On</h1>
+
+    <h2>Click on the buttons below to see different action:</h2>
+
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+
+    <script>
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let btn3 = document.getElementById('btn3');
+
+        btn1.addEventListener('click', btn1Function);
+        btn2.addEventListener('click', btn2Function);
+        btn3.addEventListener('click', btn3Function);
+
+        function btn1Function() {
+            window.alert("Button 1 was clicked!");
+        }
+
+        function btn2Function() {
+            window.alert("Button 2 was clicked!");
+        }
+
+        function btn3Function() {
+            window.alert("Button 3 was clicked!");
+        }
+
+    </script>
+</body>
+</html>
